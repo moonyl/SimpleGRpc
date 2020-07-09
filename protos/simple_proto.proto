@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+service SimpleGRpc {
+  rpc Echo(SimpleData) returns (SimpleData) {}
+}
+
+message SimpleData {
+  string data = 1;
+}
