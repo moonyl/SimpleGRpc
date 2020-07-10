@@ -2,8 +2,18 @@ syntax = "proto3";
 
 service SimpleGRpc {
   rpc Echo(SimpleData) returns (SimpleData) {}
+  rpc Add(SimpleTwoData) returns (SimpleResult) {}
 }
 
 message SimpleData {
   string data = 1;
+}
+
+message SimpleTwoData {
+  int32 input1 = 1;
+  int32 input2 = 2;
+}
+
+message SimpleResult {
+  int32 result = 1;
 }

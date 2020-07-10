@@ -15,6 +15,10 @@ public:
         return Status::OK;
     }
 
+    Status Add(ServerContext *context, const SimpleTwoData *request, SimpleResult *response) override {
+        response->set_result(request->input1() + request->input2());
+        return Status::OK;
+    }
 };
 
 void runServer() {

@@ -26,6 +26,17 @@ public:
         std::cout << "echo: " << repData.data() << std::endl;
     }
 
+    void Add(SimpleTwoData reqData) {
+        SimpleResult result;
+        ClientContext context;
+        Status status = stub_->Add(&context, reqData, &result);
+        if (!status.ok()) {
+            std::cout << "Add rpc failed." << std::endl;
+            return;
+        }
+        std::cout << "add: " << result.result();
+    }
+
 private:
     std::unique_ptr<SimpleGRpc::Stub> stub_;
 };
@@ -34,5 +45,10 @@ int main() {
     SimpleData reqData;
     reqData.set_data("my data");
     client.Echo(reqData);
+
+    SimpleTwoData reqTwoData;
+    reqTwoData.set_input1(10);
+    reqTwoData.set_input2(20);
+    client.Add(reqTwoData);
     return 0;
 }
