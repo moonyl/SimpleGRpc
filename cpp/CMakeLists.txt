@@ -13,7 +13,7 @@ find_package(gRPC CONFIG REQUIRED)
 
 set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
 
-get_filename_component(sgr_proto "protos/simple_proto.proto" ABSOLUTE)
+get_filename_component(sgr_proto "../protos/simple_proto.proto" ABSOLUTE)
 get_filename_component(sgr_proto_path "${sgr_proto}" PATH)
 
 # Generated sources
