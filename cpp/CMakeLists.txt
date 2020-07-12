@@ -42,3 +42,5 @@ foreach(_target simpleGRpcServer simpleGRpcClient)
             gRPC::grpc++_unsecure
             protobuf::libprotobuf)
 endforeach()
+
+add_subdirectory(mediaServer)
