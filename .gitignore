@@ -4,3 +4,4 @@ js/node_modules/
 python/.simple/
 python/__pycache__/
 .vscode/
+*.mp4
