@@ -6,7 +6,7 @@ streams = yt.streams.filter(mime_type="video/mp4",
                             res="720p", progressive="False")
 if streams.count() > 0:
     print("streams is list")
-    streams[0].download()
+    streams[0].download(filename="secretJuJu.mp4", output_path="../downloads")
 #streams = yt.streams.filter(res="720p")
 
 print(type(streams))
