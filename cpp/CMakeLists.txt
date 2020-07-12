@@ -44,3 +44,4 @@ foreach(_target simpleGRpcServer simpleGRpcClient)
 endforeach()
 
 add_subdirectory(mediaServer)
+add_subdirectory(remuxing)
