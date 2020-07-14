@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service YoutubeDownload {
+  rpc Download(DownloadInfo) returns (DownloadResult) {}
+}
+
+message DownloadInfo {
+  string url = 1;
+}
+
+message DownloadResult {
+  int32 result = 1;
+}

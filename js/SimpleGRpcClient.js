@@ -12,7 +12,7 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 
 //console.log(grpc.loadPackageDefinition(packageDefinition));
 const simpleProto = grpc.loadPackageDefinition(packageDefinition);
-
+console.log(simpleProto);
 const main = () => {
   //console.log(simpleProto);
   const client = new simpleProto.SimpleGRpc(
